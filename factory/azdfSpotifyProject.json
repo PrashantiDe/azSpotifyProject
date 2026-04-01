@@ -1,0 +1,9 @@
+{
+	"name": "azdfSpotifyProject",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "35c22e89-2a12-430b-a716-cde162cc4768",
+		"tenantId": "dc14321d-ecdb-4943-bc11-1212e8521d03"
+	}
+}
