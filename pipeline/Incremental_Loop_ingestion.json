@@ -262,7 +262,7 @@
 												"parameters": {
 													"container": "bronze",
 													"folder": {
-														"value": "@{item().table}_cdc",
+														"value": "cdc",
 														"type": "Expression"
 													},
 													"file": "empty.json"
@@ -305,7 +305,7 @@
 												{
 													"type": "Query",
 													"text": {
-														"value": "select MAX(@{item().cdc_col}) as Last_cdc from @{item().schema}.@{item().table}",
+														"value": "SELECT MAX(@{item().cdc_col}) as cdc FROM @{item().schema}.@{item().table}",
 														"type": "Expression"
 													}
 												}
@@ -322,6 +322,8 @@
 			{
 				"name": "Alerts",
 				"type": "WebActivity",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "ForEach1",
