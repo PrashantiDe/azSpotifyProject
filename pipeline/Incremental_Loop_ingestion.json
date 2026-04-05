@@ -230,7 +230,7 @@
 													{
 														"name": "cdc",
 														"value": {
-															"value": "@if(\n    empty(activity('max_cdc').output.resultSets[0].rows),\n    variables('current'),\n    activity('max_cdc').output.resultSets[0].rows[0].cdc\n)",
+															"value": "@activity('max_cdc').output.resultSets[0].rows[0].cdc",
 															"type": "Expression"
 														}
 													}
